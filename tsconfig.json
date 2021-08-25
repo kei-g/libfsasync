@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "charset": "utf8",
+    "declaration": true,
+    "declarationDir": "build",
+    "downlevelIteration": true,
+    "emitBOM": false,
+    "lib": [
+      "ES2015",
+    ],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "newLine": "lf",
+    "outDir": "build",
+    "pretty": true,
+    "removeComments": false,
+    "strict": true,
+    "strictNullChecks": false,
+    "target": "ES2015",
+  },
+  "files": [
+    "src/index.ts",
+    "src/lib/fs-async.ts",
+  ],
+}
