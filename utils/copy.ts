@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { copyFileAsync, readdirAsync, statAsync } from './src/lib/fs-async'
+import { copyFileAsync, readdirAsync, statAsync } from '../src/lib/fs-async'
 
 (async () => {
   const fatalExit = (err?: unknown) => {
