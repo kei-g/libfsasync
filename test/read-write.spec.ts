@@ -28,8 +28,8 @@ describe('read-write', () => {
     if (stats instanceof Error)
       expect(await mkdirAsync('tmp')).is.true
     expect(await mkdirAsync('tmp/write')).is.true
-    expect(await writeFileAsync('tmp/test.txt', 'this is a test')).is.true
-    expect(await unlinkAsync('tmp/test.txt')).is.true
+    expect(await writeFileAsync('tmp/write/test.txt', 'this is a test')).is.true
+    expect(await unlinkAsync('tmp/write/test.txt')).is.true
     expect(await rmdirAsync('tmp/write')).is.true
   })
 })
