@@ -14,7 +14,7 @@ import { copyFileAsync, readdirAsync, statAsync } from '../src/lib/fs-async'
   const argv2 = process.argv[2].split('/')
 
   const srcpattern = argv2.splice(argv2.length - 1).join('')
-  const match = srcpattern.match(/^\*(?<ext>(\.[^\.]+)+)$/)
+  const match = srcpattern.match(/^\*(?<ext>(\.[^\\.]+)+)$/)
   if (!match)
     return fatalExit(`invalid pattern, ${srcpattern}`)
 
