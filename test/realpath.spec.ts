@@ -1,6 +1,6 @@
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
-import { realpathAsync } from '../src/index'
+import { realpathAsync } from '../src'
 
 describe('realpath', () => {
   it('__dirname', async () => {

@@ -1,5 +1,5 @@
 import { Stats, existsSync } from 'fs'
-import { chownAsync, mkdirAsync, rmdirAsync, statAsync } from '../src/lib/fs-async'
+import { chownAsync, mkdirAsync, rmdirAsync, statAsync } from '../src'
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
 

@@ -1,6 +1,6 @@
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
-import { mkdirAsync, readFileAsync, rmdirAsync, statAsync, unlinkAsync, writeFileAsync } from '../src/lib/fs-async'
+import { mkdirAsync, readFileAsync, rmdirAsync, statAsync, unlinkAsync, writeFileAsync } from '../src'
 
 describe('read-write', () => {
   it('not readable', async () =>
