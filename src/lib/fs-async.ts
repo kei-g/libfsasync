@@ -105,19 +105,6 @@ export const mkdirAsync = (
       )
   )
 
-export const readdirAsync = (
-  path: PathLike,
-): Promise<NodeJS.ErrnoException | string[] | Buffer[]> =>
-  new Promise(
-    (resolve: (value: NodeJS.ErrnoException | string[] | Buffer[]) => void) =>
-      readdir(
-        path,
-        {},
-        (err: NodeJS.ErrnoException, files: string[] | Buffer[]) =>
-          resolve(err ?? files)
-      )
-  )
-
 export const readFileAsync = (
   path: PathLike,
 ): Promise<NodeJS.ErrnoException | Buffer> =>
@@ -128,6 +115,19 @@ export const readFileAsync = (
         {},
         (err: NodeJS.ErrnoException, data: Buffer) =>
           resolve(err ?? data)
+      )
+  )
+
+export const readdirAsync = (
+  path: PathLike,
+): Promise<NodeJS.ErrnoException | string[] | Buffer[]> =>
+  new Promise(
+    (resolve: (value: NodeJS.ErrnoException | string[] | Buffer[]) => void) =>
+      readdir(
+        path,
+        {},
+        (err: NodeJS.ErrnoException, files: string[] | Buffer[]) =>
+          resolve(err ?? files)
       )
   )
 
