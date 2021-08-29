@@ -1,4 +1,5 @@
 import {
+  EncodingOption,
   MakeDirectoryOptions,
   Mode,
   PathLike,
@@ -12,6 +13,7 @@ import {
   mkdir,
   readFile,
   readdir,
+  readlink,
   realpath,
   rm,
   rmdir,
@@ -128,6 +130,22 @@ export const readdirAsync = (
         {},
         (err: NodeJS.ErrnoException, files: string[] | Buffer[]) =>
           resolve(err ?? files)
+      )
+  )
+
+export const readlinkAsync = (
+  path: PathLike,
+  encoding: EncodingOption = 'utf8',
+): Promise<NodeJS.ErrnoException | string> =>
+  new Promise(
+    (
+      resolve: (value: NodeJS.ErrnoException | string) => void,
+    ) =>
+      readlink(
+        path,
+        encoding,
+        (err: NodeJS.ErrnoException, link: string) =>
+          resolve(err ?? link)
       )
   )
 
