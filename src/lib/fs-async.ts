@@ -12,6 +12,7 @@ import {
   mkdir,
   readFile,
   readdir,
+  realpath,
   rm,
   rmdir,
   stat,
@@ -127,6 +128,19 @@ export const readFileAsync = (
         {},
         (err: NodeJS.ErrnoException, data: Buffer) =>
           resolve(err ?? data)
+      )
+  )
+
+export const realpathAsync = (
+  path: PathLike,
+): Promise<NodeJS.ErrnoException | string> =>
+  new Promise(
+    (resolve: (value: NodeJS.ErrnoException | string) => void) =>
+      realpath(
+        path,
+        {},
+        (err: NodeJS.ErrnoException, resolvedPath: string) =>
+          resolve(err ?? resolvedPath)
       )
   )
 

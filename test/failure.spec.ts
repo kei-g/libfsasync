@@ -1,4 +1,4 @@
-import { chmodAsync, chownAsync, copyFileAsync, lstatAsync, mkdirAsync, readdirAsync, rmAsync, rmdirAsync, statAsync, unlinkAsync } from '../src/lib/fs-async'
+import { chmodAsync, chownAsync, copyFileAsync, lstatAsync, mkdirAsync, readdirAsync, realpathAsync, rmAsync, rmdirAsync, statAsync, unlinkAsync } from '../src/lib/fs-async'
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
 
@@ -20,6 +20,9 @@ describe('failure', () => {
   )
   it('readdirAsync', async () =>
     expect(await readdirAsync('tmp/non-existing-file')).is.instanceOf(Error)
+  )
+  it('realpathAsync', async () =>
+    expect(await realpathAsync('tmp/non-existing-file')).is.instanceOf(Error)
   )
   it('rmAsync', async () =>
     expect(await rmAsync('tmp/non-existing-file')).is.instanceOf(Error)
