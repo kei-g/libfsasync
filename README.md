@@ -1,11 +1,12 @@
 # libfsasync [![License][license-image]][license-url] [![Dependency][depencency-image]][dependency-url] [![Travis][travis-image]][travis-url] [![npm][npm-image]][npm-url]
 
-[![coverage][nyc-cov-image]][github-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url]
+[![coverage][nyc-cov-image]][github-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url] [![github][github-test-image]][github-url]
 
 Async `fs` Library
 
 [depencency-image]:https://img.shields.io/librariesio/release/npm/libfsasync?logo=nodedotjs
 [dependency-url]:https://npmjs.com/package/libfsasync?activeTab=dependencies
+[github-test-image]:https://img.shields.io/github/workflow/status/kei-g/libfsasync/test/main?label=build%20%26%20test&logo=github
 [github-url]:https://github.com/kei-g/libfsasync
 [license-image]:https://img.shields.io/github/license/kei-g/libfsasync
 [license-url]:https://opensource.org/licenses/BSD-3-Clause
