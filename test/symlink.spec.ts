@@ -1,7 +1,7 @@
 import { Stats } from 'fs'
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
-import { lstatAsync, mkdirAsync, rmAsync, rmdirAsync, statAsync, symlinkAsync, unlinkAsync, writeFileAsync } from '../src/lib/fs-async'
+import { lstatAsync, mkdirAsync, rmAsync, rmdirAsync, statAsync, symlinkAsync, unlinkAsync, writeFileAsync } from '../src'
 
 describe('symlink', () => {
   it('linkable', async () => {

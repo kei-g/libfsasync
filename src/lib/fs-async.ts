@@ -1,4 +1,5 @@
 import {
+  EncodingOption,
   MakeDirectoryOptions,
   Mode,
   PathLike,
@@ -12,6 +13,8 @@ import {
   mkdir,
   readFile,
   readdir,
+  readlink,
+  realpath,
   rm,
   rmdir,
   stat,
@@ -104,6 +107,19 @@ export const mkdirAsync = (
       )
   )
 
+export const readFileAsync = (
+  path: PathLike,
+): Promise<NodeJS.ErrnoException | Buffer> =>
+  new Promise(
+    (resolve: (value: NodeJS.ErrnoException | Buffer) => void) =>
+      readFile(
+        path,
+        {},
+        (err: NodeJS.ErrnoException, data: Buffer) =>
+          resolve(err ?? data)
+      )
+  )
+
 export const readdirAsync = (
   path: PathLike,
 ): Promise<NodeJS.ErrnoException | string[] | Buffer[]> =>
@@ -117,16 +133,32 @@ export const readdirAsync = (
       )
   )
 
-export const readFileAsync = (
+export const readlinkAsync = (
   path: PathLike,
-): Promise<NodeJS.ErrnoException | Buffer> =>
+  encoding: EncodingOption = 'utf8',
+): Promise<NodeJS.ErrnoException | string> =>
   new Promise(
-    (resolve: (value: NodeJS.ErrnoException | Buffer) => void) =>
-      readFile(
+    (
+      resolve: (value: NodeJS.ErrnoException | string) => void,
+    ) =>
+      readlink(
+        path,
+        encoding,
+        (err: NodeJS.ErrnoException, link: string) =>
+          resolve(err ?? link)
+      )
+  )
+
+export const realpathAsync = (
+  path: PathLike,
+): Promise<NodeJS.ErrnoException | string> =>
+  new Promise(
+    (resolve: (value: NodeJS.ErrnoException | string) => void) =>
+      realpath(
         path,
         {},
-        (err: NodeJS.ErrnoException, data: Buffer) =>
-          resolve(err ?? data)
+        (err: NodeJS.ErrnoException, resolvedPath: string) =>
+          resolve(err ?? resolvedPath)
       )
   )
 

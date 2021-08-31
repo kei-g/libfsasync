@@ -1,4 +1,4 @@
-import { copyFileAsync, mkdirAsync, readdirAsync, rmAsync, rmdirAsync, statAsync, writeFileAsync } from '../src/lib/fs-async'
+import { copyFileAsync, mkdirAsync, readdirAsync, rmAsync, rmdirAsync, statAsync, writeFileAsync } from '../src'
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
 
