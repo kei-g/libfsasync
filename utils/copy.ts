@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { copyFileAsync, readdirAsync, statAsync } from './src/lib/fs-async'
+import { copyFileAsync, readdirAsync, statAsync } from '../src/lib/fs-async'
 
 (async () => {
   const fatalExit = (err?: unknown) => {
@@ -14,7 +14,7 @@ import { copyFileAsync, readdirAsync, statAsync } from './src/lib/fs-async'
   const argv2 = process.argv[2].split('/')
 
   const srcpattern = argv2.splice(argv2.length - 1).join('')
-  const match = srcpattern.match(/^\*(?<ext>(\.[^\.]+)+)$/)
+  const match = srcpattern.match(/^\*(?<ext>(\.[^\\.]+)+)$/)
   if (!match)
     return fatalExit(`invalid pattern, ${srcpattern}`)
 
@@ -22,13 +22,13 @@ import { copyFileAsync, readdirAsync, statAsync } from './src/lib/fs-async'
   const srcstat = await statAsync(srcdir)
   if (srcstat instanceof Error)
     return fatalExit(srcstat)
-  if (!srcstat.isDirectory)
+  if (!srcstat.isDirectory())
     fatalExit(`${srcdir} is not a directory`)
   const dstdir = process.argv[3]
   const dststat = await statAsync(dstdir)
   if (dststat instanceof Error)
     return fatalExit(dststat)
-  if (!dststat.isDirectory)
+  if (!dststat.isDirectory())
     return fatalExit(`${dstdir} is not a directory`)
   const files = await readdirAsync(srcdir)
   if (files instanceof Error)
