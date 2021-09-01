@@ -33,9 +33,10 @@
     "lib"
   ],
   "keywords": [
+    "Promise",
     "async",
     "fs",
-    "Promise"
+    "library"
   ],
   "homepage": "https://github.com/kei-g/libfsasync",
   "license": "BSD-3-Clause",
