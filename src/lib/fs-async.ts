@@ -2,15 +2,19 @@ import {
   EncodingOption,
   MakeDirectoryOptions,
   Mode,
+  OpenMode,
   PathLike,
   PathOrFileDescriptor,
   Stats,
   chmod,
   chown,
+  close,
   copyFile,
+  fstat,
   link,
   lstat,
   mkdir,
+  open,
   readFile,
   readdir,
   readlink,
@@ -53,6 +57,18 @@ export const chownAsync = (
       )
   )
 
+export const closeAsync = (
+  fd: number,
+): Promise<NodeJS.ErrnoException | true> =>
+  new Promise(
+    (resolve: (value: NodeJS.ErrnoException | true) => void) =>
+      close(
+        fd,
+        (err: NodeJS.ErrnoException) =>
+          resolve(err ? err : true)
+      )
+  )
+
 export const copyFileAsync = (
   src: PathLike,
   dest: PathLike,
@@ -64,6 +80,23 @@ export const copyFileAsync = (
         dest,
         (err: NodeJS.ErrnoException) =>
           resolve(err ?? true)
+      )
+  )
+
+export const fstatAsync = (
+  fd: number,
+): Promise<NodeJS.ErrnoException | Stats> =>
+  new Promise(
+    (
+      resolve: (value: NodeJS.ErrnoException | Stats) => void
+    ) =>
+      fstat(
+        fd,
+        (
+          err: NodeJS.ErrnoException,
+          stats: Stats,
+        ) =>
+          resolve(err ?? stats)
       )
   )
 
@@ -104,6 +137,20 @@ export const mkdirAsync = (
         options,
         (err: NodeJS.ErrnoException, path?: string) =>
           resolve(err ?? path ?? true)
+      )
+  )
+
+export const openAsync = (
+  path: PathLike,
+  flags: OpenMode,
+): Promise<NodeJS.ErrnoException | number> =>
+  new Promise(
+    (resolve: (value: NodeJS.ErrnoException | number) => void) =>
+      open(
+        path,
+        flags,
+        (err: NodeJS.ErrnoException, fd: number) =>
+          resolve(err ? err : fd)
       )
   )
 
