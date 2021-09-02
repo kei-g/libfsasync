@@ -1,5 +1,5 @@
 import { Stats } from 'fs'
-import { chmodAsync, chownAsync, closeAsync, copyFileAsync, fstatAsync, lstatAsync, mkdirAsync, openAsync, readdirAsync, readlinkAsync, realpathAsync, rmAsync, rmdirAsync, statAsync, unlinkAsync } from '../src'
+import { chmodAsync, chownAsync, closeAsync, copyFileAsync, fstatAsync, lstatAsync, mkdirAsync, openAsync, readdirAsync, readlinkAsync, realpathAsync, renameAsync, rmAsync, rmdirAsync, statAsync, unlinkAsync } from '../src'
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
 
@@ -53,6 +53,9 @@ describe('failure', () => {
   )
   it('realpathAsync', async () =>
     expect(await realpathAsync('tmp/non-existing-file')).is.instanceOf(Error)
+  )
+  it('renameAsync', async () =>
+    expect(await renameAsync('tmp/non-existing-file', 'tmp/foo')).is.instanceOf(Error)
   )
   it('rmAsync', async () =>
     expect(await rmAsync('tmp/non-existing-file')).is.instanceOf(Error)

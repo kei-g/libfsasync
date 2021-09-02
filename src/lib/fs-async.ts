@@ -19,6 +19,7 @@ import {
   readdir,
   readlink,
   realpath,
+  rename,
   rm,
   rmdir,
   stat,
@@ -206,6 +207,20 @@ export const realpathAsync = (
         {},
         (err: NodeJS.ErrnoException, resolvedPath: string) =>
           resolve(err ?? resolvedPath)
+      )
+  )
+
+export const renameAsync = (
+  oldPath: PathLike,
+  newPath: PathLike,
+): Promise<NodeJS.ErrnoException | true> =>
+  new Promise(
+    (resolve: (value: NodeJS.ErrnoException | true) => void) =>
+      rename(
+        oldPath,
+        newPath,
+        (err: NodeJS.ErrnoException) =>
+          resolve(err ? err : true)
       )
   )
 
