@@ -14,7 +14,7 @@
 [npm-image]:https://img.shields.io/npm/v/libfsasync.svg?logo=npm
 [npm-url]:https://npmjs.org/package/libfsasync
 [npmsio-url]:https://npms.io/search?q=libfsasync
-[nyc-cov-image]:https://img.shields.io/nycrc/kei-g/libfsasync?config=.nycrc.json&label=coverage
+[nyc-cov-image]:https://img.shields.io/nycrc/kei-g/libfsasync?config=.nycrc.json&label=coverage&logo=mocha
 [quality-image]:https://img.shields.io/npms-io/quality-score/libfsasync?logo=npm
 [travis-image]:https://img.shields.io/travis/kei-g/libfsasync/main.svg?label=build%20%26%20test&logo=travis
 [travis-url]:https://app.travis-ci.com/kei-g/libfsasync
