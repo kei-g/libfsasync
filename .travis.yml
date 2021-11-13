@@ -1,14 +1,14 @@
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - main
 cache:
   directories:
     - ~/.npm
 language: node_js
 node_js:
   - 14
-  - 15
   - 16
+  - 17
 notifications:
   email: false
 script:
