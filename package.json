@@ -26,12 +26,6 @@
     "uuid": "^8.3.2"
   },
   "displayName": "libfsasync",
-  "files": [
-    "CHANGELOG.md",
-    "index.d.ts",
-    "index.js",
-    "lib"
-  ],
   "keywords": [
     "Promise",
     "async",
