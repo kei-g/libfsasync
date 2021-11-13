@@ -11,7 +11,7 @@
   ],
   "functions": 100,
   "include": [
-    "src/lib/*.ts"
+    "src/**/*.ts"
   ],
   "lines": 100,
   "reporter": [
