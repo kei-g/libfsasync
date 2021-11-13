@@ -19,8 +19,9 @@
     "strictNullChecks": false,
     "target": "ES2015",
   },
-  "files": [
-    "src/index.ts",
-    "src/lib/fs-async.ts",
+  "exclude": [
+  ],
+  "include": [
+    "src",
   ],
 }
