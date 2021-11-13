@@ -3,7 +3,7 @@
     "alwaysStrict": true,
     "charset": "utf8",
     "declaration": true,
-    "declarationDir": "build",
+    "declarationDir": ".",
     "downlevelIteration": true,
     "emitBOM": false,
     "lib": [
