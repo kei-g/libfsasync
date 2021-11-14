@@ -54,6 +54,6 @@
     "start": "true",
     "test": "run-p cover lint"
   },
-  "types": "lib/index.d.ts",
+  "types": "index.d.ts",
   "version": "1.0.0"
 }
