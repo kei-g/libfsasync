@@ -48,7 +48,7 @@
     "cover": "run-s cover:clean cover:check cover:clean",
     "cover:check": "nyc --check-coverage -r html -r text _mocha",
     "cover:clean": "rimraf tmp/",
-    "lint": "eslint src/*.ts src/lib/*.ts",
+    "lint": "eslint src/**/*.ts",
     "postpublish": "run-s clean",
     "prepublishOnly": "run-s build",
     "start": "true",
