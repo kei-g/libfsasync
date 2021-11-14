@@ -1,5 +1,9 @@
 # ChangeLogs
 
+## Version 1.0.4
+
+- :package: The declaration file path is corrected
+
 ## Version 1.0.3
 
 - :coffin: An unnecessary file is purged
