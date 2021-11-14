@@ -39,8 +39,8 @@
   },
   "repository": "github:kei-g/libfsasync",
   "scripts": {
-    "build": "npm-run-all -p clean lint -s build:tsc build:esbuild",
-    "build:esbuild": "esbuild src/index.ts --bundle --minify --outfile=index.js --platform=node",
+    "build": "npm-run-all -p clean lint -s build:tsc build:bundle",
+    "build:bundle": "esbuild src/index.ts --bundle --minify --outfile=index.js --platform=node",
     "build:tsc": "tsc",
     "clean": "rimraf .nyc_output/ build/ coverage/ index.d.ts index.js lib/",
     "cover": "run-s cover:clean cover:check cover:clean",
