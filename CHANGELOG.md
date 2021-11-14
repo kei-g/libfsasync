@@ -1,5 +1,10 @@
 # ChangeLogs
 
+## Version 1.0.3
+
+- :coffin: An unnecessary file is purged
+- :building_construction: Migration from `terser` to `esbuild`
+
 ## Version 1.0.2
 
 - :memo: `mocha` logo becomes to be used for coverage badge
