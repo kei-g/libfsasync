@@ -1,5 +1,9 @@
 # ChangeLogs
 
+## Version 1.0.5
+
+- :technologist: Developper experience is improved
+
 ## Version 1.0.4
 
 - :package: The declaration file path is corrected
