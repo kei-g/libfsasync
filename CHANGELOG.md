@@ -1,5 +1,23 @@
 # ChangeLogs
 
+## Version 1.0.6
+
+- :hammer: Build script is improved
+  - 'esbuild' and 'tsc' is made to run in parallel on 'npm run build'
+- :technologist: Developper experience is improved
+  - Cache is used by `actions/setup-node@v2` on GitHub CI
+  - Node.js versions are bumped on GitHub CI
+    - 16.13.1 is used instead of 16.13.0
+    - 17.2.0 is used instead of 17.1.0
+  - Triggers are added to the 'test' job on GitHub CI
+- :arrow_up: Packages for development are bumped
+  - `@types/chai` is bumped from 4.2.22 to 4.3.0
+  - `@types/node` is bumped from 16.11.11 to 16.11.12
+  - `@typescript-eslint/eslint-plugin` is bumped from 5.5.0 to 5.6.0
+  - `@typescript-eslint/parser` is bumped from 5.5.0 to 5.6.0
+  - `esbuild` is bumped from 0.14.1 to 0.14.2
+  - `eslint` is bumped from 8.3.0 to 8.4.1
+
 ## Version 1.0.5
 
 - :technologist: Developper experience is improved

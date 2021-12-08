@@ -3,7 +3,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '14.17.5', '16.13.0', '17.1.0' ]
+        node: [ '14.17.5', '16.13.1', '17.2.0' ]
     name: Test on Node.js ${{ matrix.node }}
     steps:
       - name: Checkout
@@ -13,6 +13,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
+          cache: 'npm'
           node-version: ${{ matrix.node }}
       - name: Setup modules
         run: npm i
@@ -25,5 +26,13 @@ jobs:
           path: coverage
 name: test
 on:
+  pull_request:
+    branches:
+      - devel
+      - main
+      - release
   push:
-    branches: [ main ]
+    branches:
+      - devel
+      - main
+      - release
