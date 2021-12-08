@@ -26,5 +26,13 @@ jobs:
           path: coverage
 name: test
 on:
+  pull_request:
+    branches:
+      - devel
+      - main
+      - release
   push:
-    branches: [ main ]
+    branches:
+      - devel
+      - main
+      - release
