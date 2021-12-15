@@ -1,0 +1,51 @@
+jobs:
+  build:
+    name: Build on Node.js ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - '14.17.5'
+          - '16.13.1'
+          - '17.2.0'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          cache: 'npm'
+          node-version: ${{ matrix.node }}
+      - name: Setup modules
+        run: npm ci
+      - name: Build
+        run: npm run build
+name: Coverage
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.github/dependabot.yml'
+      - '.gitignore'
+      - '.gitmodules'
+      - '.travis.yml'
+      - 'LICENSE'
+  push:
+    branches:
+      - devel
+      - main
+      - release
+    paths-ignore:
+      - '**.md'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.github/dependabot.yml'
+      - '.gitignore'
+      - '.gitmodules'
+      - '.travis.yml'
+      - 'LICENSE'

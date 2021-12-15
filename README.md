@@ -1,12 +1,15 @@
 # libfsasync [![license][license-image]][license-url] [![npm][npm-image]][npm-url]
 
-[![coverage][nyc-cov-image]][github-url] [![dependency][depencency-image]][dependency-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url] [![github][github-test-image]][github-url] [![travis][travis-image]][travis-url]
+[![coverage][nyc-cov-image]][github-url] [![dependency][depencency-image]][dependency-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url] [![GitHub CI (Build)][github-build-image]][github-build-url] [![GitHub CI (Coverage)][github-coverage-image]][github-coverage-url] [![travis][travis-image]][travis-url]
 
 `libfsasync` - Async `fs` Library
 
 [depencency-image]:https://img.shields.io/librariesio/release/npm/libfsasync?logo=nodedotjs
 [dependency-url]:https://npmjs.com/package/libfsasync?activeTab=dependencies
-[github-test-image]:https://img.shields.io/github/workflow/status/kei-g/libfsasync/test/main?label=build%20%26%20test&logo=github
+[github-build-image]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml/badge.svg
+[github-build-url]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml
+[github-coverage-image]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml/badge.svg
+[github-coverage-url]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml
 [github-url]:https://github.com/kei-g/libfsasync
 [license-image]:https://img.shields.io/github/license/kei-g/libfsasync
 [license-url]:https://opensource.org/licenses/BSD-3-Clause
