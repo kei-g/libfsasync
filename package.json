@@ -49,7 +49,6 @@
     "postpublish": "run-s clean",
     "prebuild": "run-p clean lint",
     "prepublishOnly": "run-s build",
-    "start": "true",
     "test": "run-p cover lint"
   },
   "types": "index.d.ts",
