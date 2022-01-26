@@ -19,6 +19,8 @@ jobs:
         with:
           cache: 'npm'
           node-version: ${{ matrix.node }}
+      - name: Upgrade npm
+        run: npm install npm@latest -g
       - name: Setup modules
         run: npm ci
       - name: Check code coverages
@@ -39,7 +41,6 @@ on:
       - '.github/dependabot.yml'
       - '.gitignore'
       - '.gitmodules'
-      - '.travis.yml'
       - 'LICENSE'
   push:
     branches:
@@ -53,5 +54,4 @@ on:
       - '.github/dependabot.yml'
       - '.gitignore'
       - '.gitmodules'
-      - '.travis.yml'
       - 'LICENSE'
