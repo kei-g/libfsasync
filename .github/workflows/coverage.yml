@@ -40,7 +40,6 @@ on:
       - '.gitattributes'
       - '.github/dependabot.yml'
       - '.gitignore'
-      - '.gitmodules'
       - 'LICENSE'
   push:
     branches:
@@ -53,5 +52,4 @@ on:
       - '.gitattributes'
       - '.github/dependabot.yml'
       - '.gitignore'
-      - '.gitmodules'
       - 'LICENSE'
