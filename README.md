@@ -1,6 +1,6 @@
 # libfsasync [![license][license-image]][license-url] [![npm][npm-image]][npm-url]
 
-[![coverage][nyc-cov-image]][github-url] [![dependency][depencency-image]][dependency-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url] [![GitHub CI (Build)][github-build-image]][github-build-url] [![GitHub CI (Coverage)][github-coverage-image]][github-coverage-url] [![travis][travis-image]][travis-url]
+[![coverage][nyc-cov-image]][github-url] [![dependency][depencency-image]][dependency-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url] [![GitHub CI (Build)][github-build-image]][github-build-url] [![GitHub CI (Coverage)][github-coverage-image]][github-coverage-url]
 
 `libfsasync` - Async `fs` Library
 
@@ -19,5 +19,3 @@
 [npmsio-url]:https://npms.io/search?q=libfsasync
 [nyc-cov-image]:https://img.shields.io/nycrc/kei-g/libfsasync?config=.nycrc.json&label=coverage&logo=mocha
 [quality-image]:https://img.shields.io/npms-io/quality-score/libfsasync?logo=npm
-[travis-image]:https://img.shields.io/travis/kei-g/libfsasync/main.svg?label=build%20%26%20test&logo=travis
-[travis-url]:https://app.travis-ci.com/kei-g/libfsasync
