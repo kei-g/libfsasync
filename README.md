@@ -12,6 +12,18 @@
 | **main** | [![GitHub CI (Build)][github-main-build-image]][github-main-build-url] | [![GitHub CI (Coverage)][github-main-coverage-image]][github-main-coverage-url] |
 | **release** | [![GitHub CI (Build)][github-release-build-image]][github-release-build-url] | [![GitHub CI (Coverage)][github-release-coverage-image]][github-release-coverage-url] |
 
+## Lincense
+
+The scripts and documentation in this project are released under the [BSD-3-Clause License](https://github.com/kei-g/libfsasync/blob/main/LICENSE)
+
+## Contributions
+
+Contributions are welcome! See [Contributor's Guide](https://github.com/kei-g/libfsasync/blob/main/CONTRIBUTING.md)
+
+### Code of Conduct
+
+:clap: Be nice. See [our code of conduct](https://github.com/kei-g/libfsasync/blob/main/CODE_OF_CONDUCT.md)
+
 [depencency-image]:https://img.shields.io/librariesio/release/npm/libfsasync?logo=nodedotjs
 [dependency-url]:https://npmjs.com/package/libfsasync?activeTab=dependencies
 [github-devel-build-image]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml/badge.svg?branch=devel
