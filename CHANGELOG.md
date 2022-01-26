@@ -1,5 +1,26 @@
 # ChangeLogs
 
+## Version 1.0.7
+
+- :hammer: Build script is improved
+  - Output format is explicitly specifyed as 'cjs'
+  - 'pre-' is separated from 'build' script
+  - 'start' script is removed
+- :arrow_up: Bumps packages for development
+  - `@types/mocha` is bumped from 9.0.0 to 9.1.0
+  - `@types/node` is bumped from 16.11.12 to 17.0.12
+  - `@typescript-eslint/eslint-plugin` is bumped from 5.6.0 to 5.10.1
+  - `@typescript-eslint/parser` is bumped from 5.6.0 to 5.10.01
+  - `chai` is bumped from 4.3.4 to 4.3.5
+  - `esbuild` is bumped from 0.14.2 to 0.14.14
+  - `eslint` is bumped from 8.4.1 to 8.7.0
+  - `mocha` is bumped from 9.1.3 to 9.2.0
+  - `typescript` is bumped from 4.5.2 to 4.5.5
+- :green_heart: CI changes
+  - `npm` becomes to be upgraded before setup modules
+  - A Farewell to Travis
+- :memo: Documents are updated
+
 ## Version 1.0.6
 
 - :hammer: Build script is improved
