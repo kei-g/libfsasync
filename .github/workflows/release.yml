@@ -1,7 +1,7 @@
 jobs:
-  release:
+  github:
     if: github.ref_type == 'tag'
-    name: Create Release
+    name: Create a release on GitHub
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
