@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - id: commit_summary
+      - id: summary
         name: Get commit summary
         run: |
           ref="${{ github.ref }}"
@@ -25,11 +25,11 @@ jobs:
         uses: actions/create-release@v1
         with:
           body: |
-            ${{ steps.commit_summary.outputs.message }}
+            ${{ steps.summary.outputs.message }}
           draft: false
           prerelease: false
-          release_name: Version ${{ steps.commit_summary.outputs.version }}
-          tag_name: v${{ steps.commit_summary.outputs.version }}
+          release_name: Version ${{ steps.summary.outputs.version }}
+          tag_name: v${{ steps.summary.outputs.version }}
 name: Create Release
 on:
   create:
