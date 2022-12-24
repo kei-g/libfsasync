@@ -1,9 +1,31 @@
 # ChangeLogs
 
+## Version 1.0.8
+
+- :green_heart: CI chore
+  - `actions/checkout` is bumped from 2 to 3
+  - `actions/setup-node` is bumped from 2 to 3
+  - `actions/upload-artifact` is bumped from 2 to 3
+  - CodeQL is installed
+  - Job to create release is modified
+  - Package ecosystem for GitHub actions is added to Dependabot
+- :arrow_up: Packages for development are bumped
+  - `@types/chai` is bumped from 4.3.0 to 4.3.4
+  - `@types/mocha` is bumped from 9.1.0 to 10.0.1
+  - `@types/node` is bumped from 17.0.12 to 18.11.17
+  - `@typescript-eslint/eslint-plugin` is bumped from 5.10.1 to 5.47.0
+  - `@typescript-eslint/parser` is bumped from 5.10.1 to 5.47.0
+  - `chai` is bumped from 4.3.5 to 4.3.7
+  - `esbuild` is bumped from 0.14.14 to 0.16.10
+  - `eslint` is bumped from 8.6.0 to 8.30.0
+  - `mocha` is bumped from 9.2.0 to 10.2.0
+  - `ts-node` is bumped from 10.4.0 to 10.9.1
+  - `typescript` is bumped from 4.5.4 to 4.9.4
+
 ## Version 1.0.7
 
 - :hammer: Build script is improved
-  - Output format is explicitly specifyed as 'cjs'
+  - Output format is explicitly specified as 'cjs'
   - 'pre-' is separated from 'build' script
   - 'start' script is removed
 - :arrow_up: Bumps packages for development
@@ -41,7 +63,7 @@
 
 ## Version 1.0.5
 
-- :technologist: Developper experience is improved
+- :technologist: Developer experience is improved
 
 ## Version 1.0.4
 
@@ -56,7 +78,7 @@
 
 - :memo: `mocha` logo becomes to be used for coverage badge
 - :heavy_minus_sign: `uuid` is removed from development packages
-- :memo: CONTIRUBUTING.md is added
+- :memo: CONTRIBUTING.md is added
 - :sparkles: New APIs are added
   - closeAsync
   - fstatAsync
@@ -78,7 +100,7 @@
 - :memo: Badges are relocated
 - :bug: Bugfix for development utility or test codes
   - inappropriate regexp is corrected
-  - invalid evalucation of function is corrected
+  - invalid evaluation of function is corrected
 - :white_check_mark: Coverage badge is added
 - :green_heart: Github Action for CI
 - :sparkles: New APIs are added
