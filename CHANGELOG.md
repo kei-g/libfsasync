@@ -3,7 +3,7 @@
 ## Version 1.0.7
 
 - :hammer: Build script is improved
-  - Output format is explicitly specifyed as 'cjs'
+  - Output format is explicitly specified as 'cjs'
   - 'pre-' is separated from 'build' script
   - 'start' script is removed
 - :arrow_up: Bumps packages for development
@@ -41,7 +41,7 @@
 
 ## Version 1.0.5
 
-- :technologist: Developper experience is improved
+- :technologist: Developer experience is improved
 
 ## Version 1.0.4
 
@@ -56,7 +56,7 @@
 
 - :memo: `mocha` logo becomes to be used for coverage badge
 - :heavy_minus_sign: `uuid` is removed from development packages
-- :memo: CONTIRUBUTING.md is added
+- :memo: CONTRIBUTING.md is added
 - :sparkles: New APIs are added
   - closeAsync
   - fstatAsync
@@ -78,7 +78,7 @@
 - :memo: Badges are relocated
 - :bug: Bugfix for development utility or test codes
   - inappropriate regexp is corrected
-  - invalid evalucation of function is corrected
+  - invalid evaluation of function is corrected
 - :white_check_mark: Coverage badge is added
 - :green_heart: Github Action for CI
 - :sparkles: New APIs are added

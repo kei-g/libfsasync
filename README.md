@@ -12,7 +12,7 @@
 | **main** | [![GitHub CI (Build)][github-main-build-image]][github-main-build-url] | [![GitHub CI (Coverage)][github-main-coverage-image]][github-main-coverage-url] |
 | **release** | [![GitHub CI (Build)][github-release-build-image]][github-release-build-url] | [![GitHub CI (Coverage)][github-release-coverage-image]][github-release-coverage-url] |
 
-## Lincense
+## License
 
 The scripts and documentation in this project are released under the [BSD-3-Clause License](https://github.com/kei-g/libfsasync/blob/main/LICENSE)
 
