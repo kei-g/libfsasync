@@ -34,11 +34,11 @@ jobs:
         uses: actions/create-release@v1
         with:
           body: |
-            ${{ steps.summary.outputs.message }}
+            ${{ steps.commit_summary.outputs.message }}
           draft: false
           prerelease: false
-          release_name: Version ${{ steps.summary.outputs.version }}
-          tag_name: v${{ steps.summary.outputs.version }}
+          release_name: Version ${{ steps.commit_summary.outputs.version }}
+          tag_name: v${{ steps.commit_summary.outputs.version }}
   npm:
     if: github.ref_type == 'tag'
     name: Publish
