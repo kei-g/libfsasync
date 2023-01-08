@@ -1,5 +1,16 @@
 # ChangeLogs
 
+## Version 1.0.9
+
+- :green_heart: CI chore
+  - Name of the step to get commit summary for create release is fixed
+- :arrow_up: Packages for development are bumped
+  - `@types/node` is bumped from 18.11.17 to 18.11.18
+  - `@typescript-eslint/eslint-plugin` is bumped from 5.47.0 to 5.48.0
+  - `@typescript-eslint/parser` is bumped from 5.47.0 to 5.48.0
+  - `esbuild` is bumped from 0.16.10 to 0.16.15
+  - `eslint` is bumped from 8.30.0 to 8.31.0
+
 ## Version 1.0.8
 
 - :green_heart: CI chore
