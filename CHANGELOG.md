@@ -1,5 +1,12 @@
 # ChangeLogs
 
+## Version 1.0.10
+
+- :arrow_up: Packages for development are bumped
+  - `@typescript-eslint/eslint-plugin` is bumped from 5.48.0 to 5.48.1
+  - `@typescript-eslint/parser` is bumped from 5.48.0 to 5.48.1
+  - `esbuild` is bumped from 0.16.15 to 0.16.16
+
 ## Version 1.0.9
 
 - :green_heart: CI chore
