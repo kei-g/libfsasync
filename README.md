@@ -6,11 +6,11 @@
 
 ## CI Status
 
-| | Build | Coverage | CodeQL |
-| ---- | ---- | ---- | ---- |
-| **devel** | [![GitHub CI (Build)][github-devel-build-image]][github-devel-build-url] | [![GitHub CI (Coverage)][github-devel-coverage-image]][github-devel-coverage-url] | [![GitHub CI (CodeQL)][github-devel-codeql-image]][github-devel-codeql-url] |
-| **main** | [![GitHub CI (Build)][github-main-build-image]][github-main-build-url] | [![GitHub CI (Coverage)][github-main-coverage-image]][github-main-coverage-url] | [![GitHub CI (CodeQL)][github-main-codeql-image]][github-main-codeql-url] |
-| **release** | [![GitHub CI (Build)][github-release-build-image]][github-release-build-url] | [![GitHub CI (Coverage)][github-release-coverage-image]][github-release-coverage-url] | [![GitHub CI (CodeQL)][github-release-codeql-image]][github-release-codeql-url] |
+| Workflow Name | Status |
+|:-:|:-:|
+| **Build** | [![GitHub CI (Build)][github-build-image]][github-build-url] |
+| **CodeQL** | [![GitHub CI (CodeQL)][github-codeql-image]][github-codeql-url] |
+| **Coverage** | [![GitHub CI (Coverage)][github-coverage-image]][github-coverage-url] |
 
 ## License
 
@@ -26,24 +26,12 @@ Contributions are welcome! See [Contributor's Guide](https://github.com/kei-g/li
 
 [depencency-image]:https://img.shields.io/librariesio/release/npm/libfsasync?logo=nodedotjs
 [dependency-url]:https://npmjs.com/package/libfsasync?activeTab=dependencies
-[github-devel-build-image]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml/badge.svg?branch=devel
-[github-devel-build-url]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml?query=branch%3Adevel
-[github-devel-codeql-image]:https://github.com/kei-g/libfsasync/actions/workflows/codeql.yml/badge.svg?branch=devel
-[github-devel-codeql-url]:https://github.com/kei-g/libfsasync/actions/workflows/codeql.yml?query=branch%3Adevel
-[github-devel-coverage-image]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml/badge.svg?branch=devel
-[github-devel-coverage-url]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml?query=branch%3Adevel
-[github-main-build-image]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml/badge.svg?branch=main
-[github-main-build-url]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml?query=branch%3Amain
-[github-main-codeql-image]:https://github.com/kei-g/libfsasync/actions/workflows/codeql.yml/badge.svg?branch=main
-[github-main-codeql-url]:https://github.com/kei-g/libfsasync/actions/workflows/codeql.yml?query=branch%3Amain
-[github-main-coverage-image]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml/badge.svg?branch=main
-[github-main-coverage-url]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml?query=branch%3Amain
-[github-release-build-image]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml/badge.svg?branch=release
-[github-release-build-url]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml?query=branch%3Arelease
-[github-release-codeql-image]:https://github.com/kei-g/libfsasync/actions/workflows/codeql.yml/badge.svg?branch=release
-[github-release-codeql-url]:https://github.com/kei-g/libfsasync/actions/workflows/codeql.yml?query=branch%3Arelease
-[github-release-coverage-image]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml/badge.svg?branch=release
-[github-release-coverage-url]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml?query=branch%3Arelease
+[github-build-image]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml/badge.svg?branch=main
+[github-build-url]:https://github.com/kei-g/libfsasync/actions/workflows/build.yml?query=branch%3Amain
+[github-codeql-image]:https://github.com/kei-g/libfsasync/actions/workflows/codeql.yml/badge.svg?branch=main
+[github-codeql-url]:https://github.com/kei-g/libfsasync/actions/workflows/codeql.yml?query=branch%3Amain
+[github-coverage-image]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml/badge.svg?branch=main
+[github-coverage-url]:https://github.com/kei-g/libfsasync/actions/workflows/coverage.yml?query=branch%3Amain
 [github-url]:https://github.com/kei-g/libfsasync
 [license-image]:https://img.shields.io/github/license/kei-g/libfsasync
 [license-url]:https://opensource.org/licenses/BSD-3-Clause
