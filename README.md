@@ -2,7 +2,7 @@
 
 [![coverage][nyc-cov-image]][github-url] [![dependency][depencency-image]][dependency-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url]
 
-`libfsasync` - Async `fs` Library
+[`libfsasync`][github-url] - Async `fs` Library
 
 ## CI Status
 
