@@ -29,18 +29,8 @@ jobs:
 name: Build
 on:
   pull_request:
-    paths-ignore:
-      - '**.md'
-      - '.editorconfig'
-      - '.gitattributes'
-      - '.github/dependabot.yml'
-      - '.gitignore'
-      - 'LICENSE'
+    branches:
+      - '**'
   push:
-    paths-ignore:
-      - '**.md'
-      - '.editorconfig'
-      - '.gitattributes'
-      - '.github/dependabot.yml'
-      - '.gitignore'
-      - 'LICENSE'
+    branches:
+      - '**'
