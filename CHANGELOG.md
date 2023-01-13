@@ -1,5 +1,11 @@
 # ChangeLogs
 
+## Version 1.0.11
+
+- :arrow_up: Packages for development are bumped
+  - `esbuild` is bumped from 0.16.16 to 0.16.17
+  - `rimraf` is bumped from 3.0.2 to 4.0.4
+
 ## Version 1.0.10
 
 - :arrow_up: Packages for development are bumped
