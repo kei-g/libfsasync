@@ -26,11 +26,6 @@ jobs:
         uses: github/codeql-action/analyze@v2
 name: CodeQL
 on:
-  pull_request:
-    branches:
-      - '**'
   push:
     branches:
-      - '**'
-  schedule:
-    - cron: '39 11 * * 4'
+      - main
