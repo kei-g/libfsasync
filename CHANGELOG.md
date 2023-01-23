@@ -1,5 +1,11 @@
 # ChangeLogs
 
+## Version 1.0.14
+
+- :arrow_up: Packages for development are bumped
+  - `esbuild` is bumped from 0.17.1 to 0.17.4
+  - `rimraf` is bumped from 4.1.0 to 4.1.1
+
 ## Version 1.0.13
 
 - :green_heart: CI
