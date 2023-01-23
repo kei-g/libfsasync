@@ -30,3 +30,5 @@ on:
   push:
     branches:
       - main
+    tags-ignore:
+      - '**'
