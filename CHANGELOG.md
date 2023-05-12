@@ -1,5 +1,9 @@
 # ChangeLogs
 
+## Version 1.0.16
+
+- :poop: Correct the erroneous preceding release
+
 ## Version 1.0.15
 
 - :green_heart: CI
