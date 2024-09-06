@@ -1,0 +1,9 @@
+{
+  "allowCompoundWords": true,
+  "caseSensitive": false,
+  "version": "0.2",
+  "words": [
+    "fstat",
+    "tada"
+  ]
+}
