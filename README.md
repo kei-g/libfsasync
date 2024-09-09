@@ -1,6 +1,6 @@
 # libfsasync [![license][license-image]][license-url] [![npm][npm-image]][npm-url]
 
-[![coverage][nyc-cov-image]][github-url] [![dependency][depencency-image]][dependency-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url]
+[![dependency][depencency-image]][dependency-url] [![maintenance][maintenance-image]][npmsio-url] [![quality][quality-image]][npmsio-url]
 
 [`libfsasync`][github-url] - Async `fs` Library
 
@@ -39,5 +39,4 @@ Contributions are welcome! See [Contributor's Guide](https://github.com/kei-g/li
 [npm-image]:https://img.shields.io/npm/v/libfsasync.svg?logo=npm
 [npm-url]:https://npmjs.org/package/libfsasync
 [npmsio-url]:https://npms.io/search?q=libfsasync
-[nyc-cov-image]:https://img.shields.io/nycrc/kei-g/libfsasync?config=.nycrc.json&label=coverage&logo=mocha
 [quality-image]:https://img.shields.io/npms-io/quality-score/libfsasync?logo=npm
