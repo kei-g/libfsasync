@@ -17,9 +17,11 @@
     "strict": true,
     "strictNullChecks": false,
     "target": "ES2015",
+    "typeRoots": [
+      "node_modules/@types",
+    ],
   },
-  "exclude": [
-  ],
+  "exclude": [],
   "include": [
     "src",
   ],

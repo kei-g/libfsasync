@@ -1,26 +1,24 @@
-import { Stats } from 'fs'
+import assert, { equal } from 'node:assert'
 import { describe, it } from 'mocha'
-import { expect } from 'chai'
 import { linkAsync, lstatAsync, mkdirAsync, readlinkAsync, rmAsync, rmdirAsync, statAsync, symlinkAsync, unlinkAsync, writeFileAsync } from '../src'
 
 describe('link', () => {
   it('linkable', async () => {
     const stats = await statAsync('tmp')
     if (stats instanceof Error)
-      expect(await mkdirAsync('tmp')).is.true
-    expect(await mkdirAsync('tmp/link')).is.true
-    expect(await writeFileAsync('tmp/link/foo', 'this is foo')).is.true
-    expect(await linkAsync('tmp/link/foo', 'tmp/link/bar')).is.true
-    const lstats = await lstatAsync('tmp/link/bar')
-    expect(lstats).is.not.instanceOf(Error)
-    if (lstats instanceof Stats)
-      expect(lstats.isSymbolicLink()).is.false
-    expect(await unlinkAsync('tmp/link/bar')).is.true
-    expect(await rmAsync('tmp/link/foo')).is.true
-    expect(await rmdirAsync('tmp/link')).is.true
+      equal(await mkdirAsync('tmp'), true)
+    equal(await mkdirAsync('tmp/link'), true)
+    equal(await writeFileAsync('tmp/link/foo', 'this is foo'), true)
+    equal(await linkAsync('tmp/link/foo', 'tmp/link/bar'), true)
+    const l = await lstatAsync('tmp/link/bar')
+    assert(!(l instanceof Error))
+    equal(l.isSymbolicLink(), false)
+    equal(await unlinkAsync('tmp/link/bar'), true)
+    equal(await rmAsync('tmp/link/foo'), true)
+    equal(await rmdirAsync('tmp/link'), true)
   })
   it('not linkable', async () =>
-    expect(await linkAsync('tmp/link/non-existing-file', 'tmp/link/zzz')).is.instanceOf(Error)
+    assert(await linkAsync('tmp/link/non-existing-file', 'tmp/link/zzz') instanceof Error)
   )
 })
 
@@ -28,16 +26,16 @@ describe('readlink', () => {
   it('readlinkAsync', async () => {
     const stats = await statAsync('tmp')
     if (stats instanceof Error)
-      expect(await mkdirAsync('tmp')).is.true
-    expect(await mkdirAsync('tmp/read-link')).is.true
-    expect(await mkdirAsync('tmp/read-link/foo')).is.true
-    expect(await writeFileAsync('tmp/read-link/foo/bar', 'this is foo/bar\n')).is.true
-    expect(await symlinkAsync('../foo/bar', 'tmp/read-link/bar', 'file')).to.be.not.instanceOf(Error)
+      equal(await mkdirAsync('tmp'), true)
+    equal(await mkdirAsync('tmp/read-link'), true)
+    equal(await mkdirAsync('tmp/read-link/foo'), true)
+    equal(await writeFileAsync('tmp/read-link/foo/bar', 'this is foo/bar\n'), true)
+    assert(!(await symlinkAsync('../foo/bar', 'tmp/read-link/bar', 'file') instanceof Error))
     const link = await readlinkAsync('tmp/read-link/bar')
-    expect(link).to.be.not.instanceOf(Error)
-    expect(await unlinkAsync('tmp/read-link/foo/bar')).is.true
-    expect(await rmdirAsync('tmp/read-link/foo')).is.true
-    expect(await unlinkAsync('tmp/read-link/bar')).is.true
-    expect(await rmdirAsync('tmp/read-link')).is.true
+    assert(!(link instanceof Error))
+    equal(await unlinkAsync('tmp/read-link/foo/bar'), true)
+    equal(await rmdirAsync('tmp/read-link/foo'), true)
+    equal(await unlinkAsync('tmp/read-link/bar'), true)
+    equal(await rmdirAsync('tmp/read-link'), true)
   })
 })

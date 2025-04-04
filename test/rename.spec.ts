@@ -1,16 +1,16 @@
-import { mkdirAsync, renameAsync, rmdirAsync, statAsync } from '../src'
 import { describe, it } from 'mocha'
-import { expect } from 'chai'
+import { equal } from 'node:assert'
+import { mkdirAsync, renameAsync, rmdirAsync, statAsync } from '../src'
 
 describe('rename', () => {
   it('successful', async () => {
     const stats = await statAsync('tmp')
     if (stats instanceof Error)
-      expect(await mkdirAsync('tmp')).is.true
-    expect(await mkdirAsync('tmp/rename')).is.true
-    expect(await mkdirAsync('tmp/rename/foo')).is.true
-    expect(await renameAsync('tmp/rename/foo', 'tmp/rename/bar')).is.true
-    expect(await rmdirAsync('tmp/rename/bar')).is.true
-    expect(await rmdirAsync('tmp/rename')).is.true
+      equal(await mkdirAsync('tmp'), true)
+    equal(await mkdirAsync('tmp/rename'), true)
+    equal(await mkdirAsync('tmp/rename/foo'), true)
+    equal(await renameAsync('tmp/rename/foo', 'tmp/rename/bar'), true)
+    equal(await rmdirAsync('tmp/rename/bar'), true)
+    equal(await rmdirAsync('tmp/rename'), true)
   })
 })

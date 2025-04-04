@@ -1,24 +1,21 @@
-import { Stats } from 'fs'
+import assert, { equal } from 'node:assert'
 import { closeAsync, fstatAsync, mkdirAsync, openAsync, rmdirAsync, unlinkAsync, writeFileAsync } from '../src'
 import { describe, it } from 'mocha'
-import { expect } from 'chai'
 
 describe('open-fstat-close', () => {
   it('open-fstat-close', async () => {
     await mkdirAsync('tmp')
-    expect(await mkdirAsync('tmp/open')).to.be.true
-    expect(await writeFileAsync('tmp/open/foo', 'this is foo')).to.be.true
+    equal(await mkdirAsync('tmp/open'), true)
+    equal(await writeFileAsync('tmp/open/foo', 'this is foo'), true)
     const fd = await openAsync('tmp/open/foo', 'r')
-    expect(fd).to.not.be.an.instanceOf(Error)
-    expect(fd).to.be.greaterThanOrEqual(0)
-    if (!(fd instanceof Error)) {
-      const stats = await fstatAsync(fd)
-      expect(stats).to.not.be.an.instanceOf(Error)
-      expect(stats).to.satisfy((stats: Stats) => stats.isFile())
-      const success = await closeAsync(fd)
-      expect(success).to.not.be.an.instanceOf(Error)
-      expect(success).to.be.true
-    }
+    assert(!(fd instanceof Error))
+    assert(0 <= fd)
+    const stats = await fstatAsync(fd)
+    assert(!(stats instanceof Error))
+    assert(stats.isFile())
+    const success = await closeAsync(fd)
+    assert(!(success instanceof Error))
+    equal(success, true)
     await unlinkAsync('tmp/open/foo')
     await rmdirAsync('tmp/open')
     await rmdirAsync('tmp')
