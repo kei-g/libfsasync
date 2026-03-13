@@ -1,6 +1,6 @@
 import assert, { equal } from 'node:assert'
 import { describe, it } from 'mocha'
-import { linkAsync, lstatAsync, mkdirAsync, readlinkAsync, rmAsync, rmdirAsync, statAsync, symlinkAsync, unlinkAsync, writeFileAsync } from '../src'
+import { linkAsync, lstatAsync, mkdirAsync, readlinkAsync, rmAsync, rmdirAsync, statAsync, symlinkAsync, unlinkAsync, writeFileAsync } from '../src/index.ts'
 
 describe('link', () => {
   it('linkable', async () => {

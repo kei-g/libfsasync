@@ -1,5 +1,5 @@
 import assert, { equal } from 'node:assert'
-import { chownAsync, mkdirAsync, rmdirAsync, statAsync } from '../src'
+import { chownAsync, mkdirAsync, rmdirAsync, statAsync } from '../src/index.ts'
 import { describe, it } from 'mocha'
 import { existsSync } from 'node:fs'
 

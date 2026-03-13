@@ -1,6 +1,6 @@
 import assert, { equal } from 'node:assert'
 import { describe, it } from 'mocha'
-import { mkdirAsync, readFileAsync, rmdirAsync, statAsync, unlinkAsync, writeFileAsync } from '../src'
+import { mkdirAsync, readFileAsync, rmdirAsync, statAsync, unlinkAsync, writeFileAsync } from '../src/index.ts'
 
 describe('read-write', () => {
   it('not readable', async () =>

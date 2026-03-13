@@ -1,4 +1,4 @@
-import { chmodAsync, mkdirAsync, rmdirAsync } from '../src'
+import { chmodAsync, mkdirAsync, rmdirAsync } from '../src/index.ts'
 import { describe, it } from 'mocha'
 import { equal } from 'node:assert'
 import { existsSync } from 'node:fs'

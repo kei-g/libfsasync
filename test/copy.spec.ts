@@ -1,5 +1,5 @@
 import assert, { equal } from 'node:assert'
-import { copyFileAsync, mkdirAsync, readdirAsync, rmAsync, rmdirAsync, statAsync, writeFileAsync } from '../src'
+import { copyFileAsync, mkdirAsync, readdirAsync, rmAsync, rmdirAsync, statAsync, writeFileAsync } from '../src/index.ts'
 import { describe, it } from 'mocha'
 
 describe('copy', () => {

@@ -1,5 +1,5 @@
 import assert, { equal } from 'node:assert'
-import { chmodAsync, chownAsync, closeAsync, copyFileAsync, fstatAsync, lstatAsync, mkdirAsync, openAsync, readdirAsync, readlinkAsync, realpathAsync, renameAsync, rmAsync, rmdirAsync, statAsync, unlinkAsync } from '../src'
+import { chmodAsync, chownAsync, closeAsync, copyFileAsync, fstatAsync, lstatAsync, mkdirAsync, openAsync, readdirAsync, readlinkAsync, realpathAsync, renameAsync, rmAsync, rmdirAsync, statAsync, unlinkAsync } from '../src/index.ts'
 import { describe, it } from 'mocha'
 
 describe('failure', () => {

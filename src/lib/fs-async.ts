@@ -1,11 +1,11 @@
 import {
-  EncodingOption,
-  MakeDirectoryOptions,
-  Mode,
-  OpenMode,
-  PathLike,
-  PathOrFileDescriptor,
-  Stats,
+  type EncodingOption,
+  type MakeDirectoryOptions,
+  type Mode,
+  type OpenMode,
+  type PathLike,
+  type PathOrFileDescriptor,
+  type Stats,
   chmod,
   chown,
   close,
@@ -26,7 +26,7 @@ import {
   symlink,
   unlink,
   writeFile,
-} from 'fs'
+} from 'node:fs'
 
 export const chmodAsync = (
   path: PathLike,

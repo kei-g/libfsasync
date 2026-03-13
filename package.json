@@ -8,18 +8,16 @@
   },
   "description": "Async fs Library",
   "devDependencies": {
-    "@types/eslint": "^9.6.1",
+    "@biomejs/biome": "^2.4.6",
     "@types/mocha": "^10.0.10",
     "@types/node": "^25.5.0",
     "c8": "^10.1.3",
     "esbuild": "^0.27.4",
     "esbuild-register": "^3.6.0",
-    "eslint": "^9.39.1",
     "mocha": "^11.7.5",
     "npm-run-all": "^4.1.5",
     "rimraf": "^6.1.3",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.0"
+    "typescript": "^5.9.3"
   },
   "keywords": [
     "Promise",
@@ -43,7 +41,7 @@
     "cover": "run-s cover:clean cover:check cover:clean",
     "cover:check": "c8 --check-coverage _mocha",
     "cover:clean": "rimraf tmp/",
-    "lint": "eslint src/**/*.ts",
+    "lint": "biome lint --write",
     "postpublish": "run-s clean",
     "prebuild": "run-p clean lint",
     "prepublishOnly": "run-s build",

@@ -1,6 +1,6 @@
 import { describe, it } from 'mocha'
 import { equal } from 'node:assert'
-import { mkdirAsync, renameAsync, rmdirAsync, statAsync } from '../src'
+import { mkdirAsync, renameAsync, rmdirAsync, statAsync } from '../src/index.ts'
 
 describe('rename', () => {
   it('successful', async () => {

@@ -1,5 +1,5 @@
 import assert, { equal } from 'node:assert'
-import { closeAsync, fstatAsync, mkdirAsync, openAsync, rmdirAsync, unlinkAsync, writeFileAsync } from '../src'
+import { closeAsync, fstatAsync, mkdirAsync, openAsync, rmdirAsync, unlinkAsync, writeFileAsync } from '../src/index.ts'
 import { describe, it } from 'mocha'
 
 describe('open-fstat-close', () => {
@@ -9,7 +9,7 @@ describe('open-fstat-close', () => {
     equal(await writeFileAsync('tmp/open/foo', 'this is foo'), true)
     const fd = await openAsync('tmp/open/foo', 'r')
     assert(!(fd instanceof Error))
-    assert(0 <= fd)
+    assert(fd >= 0 )
     const stats = await fstatAsync(fd)
     assert(!(stats instanceof Error))
     assert(stats.isFile())

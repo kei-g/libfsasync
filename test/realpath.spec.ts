@@ -1,6 +1,6 @@
 import assert, { equal } from 'node:assert'
 import { describe, it } from 'mocha'
-import { realpathAsync } from '../src'
+import { realpathAsync } from '../src/index.ts'
 
 describe('realpath', () => {
   it('__dirname', async () => {
