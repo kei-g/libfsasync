@@ -1,11 +1,11 @@
 import assert, { equal } from 'node:assert'
-import { describe, it } from 'mocha'
+import { describe, it } from 'node:test'
 import { realpathAsync } from '../src/index.ts'
 
 describe('realpath', () => {
-  it('__dirname', async () => {
-    const rp = await realpathAsync(__dirname)
+  it('import.meta.dirname', async () => {
+    const rp = await realpathAsync(import.meta.dirname)
     assert(!(rp instanceof Error))
-    equal(rp, __dirname)
+    equal(rp, import.meta.dirname)
   })
 })
